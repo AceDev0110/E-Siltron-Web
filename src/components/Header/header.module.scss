@@ -1,0 +1,76 @@
+
+@import '../../styles/config/config.scss';
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&family=Trade+Winds&display=swap');
+.header {
+  position: absolute;
+  width: 100%;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 10px 10px rgba(black, 0.2);
+  
+
+  //height: 72px;
+  z-index: 99;
+  background-color: rgba(0,0,0,0.8);
+  color : white;  
+
+  @include media-query($medium-down) {
+    background: var(--color-white);
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.20);
+  }
+
+  &__wrapper {
+      position: relative;
+      padding: 0 24px;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr;
+
+      @include media-query($large-up) {
+
+        &[data-nav-position="center"] {
+          grid-template-columns: 10% 80% 10%;
+        }
+      }
+  }
+}
+
+.header__wrapper {
+  padding : 12px;
+}
+
+.title {
+  //padding-left: 20px;
+  color : rgb(200,200,200);
+  font-family: 'Trade Winds', cursive;
+  font-size: 20px;
+  margin : 20px;
+  margin-left : 20px;
+}
+.titleContainer {
+  height : 60px;
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(0,0,0,0.2);
+}
+
+hr {
+  border-style: inset; 
+  border-width: 1px;
+  border-color: rgba(255,255,255,0.4);
+  border-top-style: hidden;
+  margin : 0px;
+}

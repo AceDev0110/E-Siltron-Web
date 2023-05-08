@@ -1,0 +1,41 @@
+
+.textDiv{
+    display: flex;
+    flex-direction : column;
+}
+
+.boldText {
+    font-weight: 400;
+    font-size: 30px;
+    color : black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.lightText {
+    color : gray;
+    font-size: 20px;
+    text-align: center;
+}
+
+.shopNowBtn {
+    margin-top: 100px;
+
+    /* background-color: gray; */
+}
+
+.amazonImage {
+    
+    width : 200px;
+    height : 100px;
+    border-radius: 20px;
+    margin : auto;
+    
+}
+
+.amazonP {
+    font-size: 24px;
+    font-weight: bold;
+    color : gray;
+    text-align: center;
+}

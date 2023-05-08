@@ -1,0 +1,27 @@
+.App {
+  margin-top: 0px;
+  background-color : #e6e6e6;
+  min-height: 100vh;
+}
+
+.App .navbar-brand {
+  font-weight: bold;
+}
+
+.App .container{
+  align-content: center
+}
+
+
+.sticky-wrapper {
+  position: relative;
+  height: 3rem; /* We need to change this value */
+}
+
+.sticky .sticky-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}

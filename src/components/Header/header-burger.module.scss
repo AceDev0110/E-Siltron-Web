@@ -1,0 +1,50 @@
+@import '../../styles/config/config.scss';
+
+.burger {
+    width: 28px;
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 11;
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: end;
+    cursor: pointer;
+
+    @include media-query($large-up) {
+        [data-nav-position="right"] &,
+        [data-nav-position="center"] & {
+            display: none;
+        }
+    }
+
+    &__line {
+        width: 28px;
+        height: 2px;
+        background: var(--color-black);
+        border-radius: 2px;
+        transform-origin: left center;
+        transition: all 0.3s ease;
+
+        &:first-of-type {
+            .open & {
+                transform: rotate(44deg) translate3d(-2px,0,0);
+            }
+        }
+
+        &:nth-of-type(2) {
+            width: 17px;
+
+            .open & {
+                opacity: 0;
+            }
+        }
+
+        &:last-of-type {
+            .open & {
+                transform: rotate(-46deg) translate3d(-4px, 0, 0);
+            }
+        }
+    }
+}

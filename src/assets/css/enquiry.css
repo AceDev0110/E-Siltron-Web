@@ -1,0 +1,35 @@
+img {
+    width : 300px;
+    height : 300px;
+    margin-right: 20px;
+}
+
+input {
+    font-size: 24px;
+}
+.enquireActionDiv {
+    display: flex;
+    margin : auto;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    /* padding-bottom : 5px; */
+}
+
+.RenderItemContainer{
+    padding : 20px;
+    width : 70%;
+    margin : auto;
+}
+
+.RenderItemDiv {
+    display : flex;
+    /* padding : 20px; */
+    background-color: white;
+    width : 100%;
+    margin-bottom: 10px;
+}
+
+.RenderItemTitle {
+    text-align: center;
+    margin:auto;
+}

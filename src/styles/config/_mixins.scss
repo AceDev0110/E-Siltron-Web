@@ -1,0 +1,84 @@
+//MEDIA-QUERY MIXIN
+@mixin media-query($media-query) {
+  $breakpoint-found: false;
+
+  @each $breakpoint in $breakpoints {
+      $name: nth($breakpoint, 1);
+      $declaration: nth($breakpoint, 2);
+
+      @if $media-query == $name and $declaration {
+          $breakpoint-found: true;
+
+          @media only screen and #{$declaration} {
+              @content;
+          }
+      }
+  }
+
+  @if not $breakpoint-found {
+      @warn "Breakpoint ‘#{$media-query}’ does not exist";
+  }
+}
+
+//FLUID TYPOGRAPHY
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+      }
+      }
+  }
+}
+//FLUID LINE HEIGHT
+@mixin fluid-line($min-vw, $max-vw, $min-line-size, $max-line-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-line-size);
+  $u4: unit($max-line-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+      line-height: $min-line-size;
+      @media screen and (min-width: $min-vw) {
+          line-height: calc(#{$min-line-size} + #{strip-unit($max-line-size - $min-line-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+          line-height: $max-line-size;
+      }
+      }
+  }
+}
+
+//FLUID LETTER SPACING
+@mixin fluid-letter($min-vw, $max-vw, $min-letter-spacing, $max-letter-spacing) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-letter-spacing);
+  $u4: unit($max-letter-spacing);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+      letter-spacing: $min-letter-spacing;
+      @media screen and (min-width: $min-vw) {
+          letter-spacing: calc(#{$min-letter-spacing} + #{strip-unit($max-letter-spacing - $min-letter-spacing)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+          letter-spacing: $max-letter-spacing;
+      }
+      }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "siltron-web-app",
+  "version": "1.2.0",
+  "private": true,
+  "dependencies": {
+    "@firebase/storage": "^0.3.42",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material/react-icon-button": "^0.15.0",
+    "@material/react-material-icon": "^0.15.0",
+    "axios": "^0.20.0",
+    "bootstrap": "4.5.0",
+    "chart.js": "2.9.3",
+    "emailjs-gmail": "^1.0.1",
+    "firebase": "^7.19.1",
+    "gmail-send": "^1.8.10",
+    "gsap": "^3.5.1",
+    "history": "4.10.1",
+    "mailsender": "^1.1.2",
+    "node-sass": "4.14.1",
+    "perfect-scrollbar": "1.5.0",
+    "react": "16.13.1",
+    "react-alert": "^7.0.2",
+    "react-alice-carousel": "^1.19.3",
+    "react-awesome-button": "^6.5.1",
+    "react-awesome-loader": "^2.0.1",
+    "react-awesome-slider": "^4.1.0",
+    "react-chartjs-2": "2.9.0",
+    "react-coverflow": "^0.2.20",
+    "react-device-detect": "^1.13.1",
+    "react-dom": "16.13.1",
+    "react-google-maps": "9.4.5",
+    "react-loader-spinner": "^3.1.14",
+    "react-mobile-store-button": "0.0.6",
+    "react-notification-alert": "0.0.12",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "3.4.1",
+    "react-simple-image-slider": "^1.0.4",
+    "react-social-icons": "^4.1.0",
+    "react-toastify": "^6.0.8",
+    "reactstrap": "8.4.1",
+    "sendmail": "^1.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && gulp licenses",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "compile-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.css",
+    "minify-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.min.css --output-style compressed",
+    "map-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.css --source-map true"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "optionalDependencies": {
+    "@types/googlemaps": "3.39.6",
+    "@types/markerclustererplus": "2.1.33",
+    "@types/react": "16.9.35",
+    "ajv": "6.12.2",
+    "jquery": "3.5.1",
+    "typescript": "3.9.5"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8"
+  }
+}

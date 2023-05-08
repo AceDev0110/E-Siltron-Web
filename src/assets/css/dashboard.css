@@ -1,0 +1,46 @@
+.content{
+  margin : 0px;
+}
+
+.alice-carousel ul li img {
+  height: 20vh;
+  width: 100%;
+  object-fit: stretch;
+  resize: both;
+  padding: 20px;
+  border-radius: 30px;
+  filter: drop-shadow(0px 0px 4px gray);
+  align-self: center;
+  margin: auto;
+}
+.SliderDiv {
+  /* max-width: 800px;
+  max-height: 600px; */
+  
+  height : 100vh;
+  width : 100vw;
+  margin : auto;
+  margin-bottom: 50px;
+}
+.FixedDiv {
+  /* background-color: #DDDDDD;
+  border : 1px solid gray; */
+  border-radius: 10px;
+  margin: 10px;
+}
+.FixedContainer{
+  display : flex;
+  flex-wrap: wrap;
+  width : 80%;
+  margin: auto;
+}
+
+.FixedItemContainer{
+  background-color : white;
+  display: flex;
+  height : 50vh;
+  margin : 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding : 20px;
+}
